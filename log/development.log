@@ -1,0 +1,1203 @@
+Started GET "/" for 127.0.0.1 at 2022-12-02 23:33:43 -0500
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.7) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.7) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProducts (20171118143837)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "upc" varchar, "image_url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171118143837"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-12-03 04:34:20.983763"], ["updated_at", "2022-12-03 04:34:20.983763"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "upc" varchar, "image_url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20171118143837)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-12-03 04:34:36.654202"], ["updated_at", "2022-12-03 04:34:36.654202"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2022-12-03 04:34:36.670971"], ["key", "environment"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2022-12-02 23:34:39 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 6413ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: font-awesome-sprockets.
+Load paths:
+  /Users/shengyu/Masters/SaaS/rails-with-barcode-scanner/app/assets/config
+  /Users/shengyu/Masters/SaaS/rails-with-barcode-scanner/app/assets/images
+  /Users/shengyu/Masters/SaaS/rails-with-barcode-scanner/app/assets/javascripts
+  /Users/shengyu/Masters/SaaS/rails-with-barcode-scanner/app/assets/stylesheets
+  /Users/shengyu/Masters/SaaS/rails-with-barcode-scanner/vendor/assets/javascripts
+  /Users/shengyu/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/jquery-rails-4.5.1/vendor/assets/javascripts
+  /Users/shengyu/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/shengyu/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/actioncable-5.1.7/lib/assets/compiled
+  /Users/shengyu/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/actionview-5.1.7/lib/assets/compiled
+  /Users/shengyu/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/shengyu/Masters/SaaS/rails-with-barcode-scanner/node_modules
+  /Users/shengyu/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.4.1/assets/stylesheets
+  /Users/shengyu/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.4.1/assets/javascripts
+  /Users/shengyu/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.4.1/assets/fonts
+  /Users/shengyu/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.4.1/assets/images
+  /Users/shengyu/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/font-awesome-sass-6.2.1/assets/stylesheets
+  /Users/shengyu/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/font-awesome-sass-6.2.1/assets/fonts):
+    4:     <title>RailsWorkingWithBarcodes</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:20
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___615690403780398226_70159105975240'
+Started GET "/" for 127.0.0.1 at 2022-12-02 23:36:24 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 642ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: font-awesome-sprockets.
+Load paths:
+  /Users/shengyu/Masters/SaaS/rails-with-barcode-scanner/app/assets/config
+  /Users/shengyu/Masters/SaaS/rails-with-barcode-scanner/app/assets/images
+  /Users/shengyu/Masters/SaaS/rails-with-barcode-scanner/app/assets/javascripts
+  /Users/shengyu/Masters/SaaS/rails-with-barcode-scanner/app/assets/stylesheets
+  /Users/shengyu/Masters/SaaS/rails-with-barcode-scanner/vendor/assets/javascripts
+  /Users/shengyu/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/jquery-rails-4.5.1/vendor/assets/javascripts
+  /Users/shengyu/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/shengyu/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/actioncable-5.1.7/lib/assets/compiled
+  /Users/shengyu/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/actionview-5.1.7/lib/assets/compiled
+  /Users/shengyu/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/shengyu/Masters/SaaS/rails-with-barcode-scanner/node_modules
+  /Users/shengyu/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.4.1/assets/stylesheets
+  /Users/shengyu/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.4.1/assets/javascripts
+  /Users/shengyu/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.4.1/assets/fonts
+  /Users/shengyu/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.4.1/assets/images
+  /Users/shengyu/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/font-awesome-sass-6.2.1/assets/stylesheets
+  /Users/shengyu/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/font-awesome-sass-6.2.1/assets/fonts):
+    4:     <title>RailsWorkingWithBarcodes</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:20
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___463707679736862295_70294180928220'
+Started GET "/" for 127.0.0.1 at 2022-12-02 23:38:25 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 2928ms (Views: 2923.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-02 23:38:38 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 63ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-02 23:38:40 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-12-02 23:38:41 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 47ms (Views: 38.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-12-02 23:38:43 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 39ms (Views: 37.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2022-12-02 23:38:47 -0500
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (1589.7ms)
+  Rendered products/new.html.erb within layouts/application (1593.2ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 1629ms (Views: 1618.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-12-02 23:38:50 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 64ms (Views: 62.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-12-02 23:38:53 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 67ms (Views: 65.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-12-02 23:38:56 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-12-02 23:39:04 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-12-02 23:39:06 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-12-02 23:39:10 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-02 23:39:17 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 33ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/get_barcode" for 127.0.0.1 at 2022-12-02 23:39:50 -0500
+Processing by ProductsController#get_barcode as */*
+  Parameters: {"upc"=>"10113240"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."upc" = ? LIMIT ?[0m  [["upc", "10113240"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/products/new?upc=10113240
+Completed 200 OK in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new?upc=10113240" for 127.0.0.1 at 2022-12-02 23:39:50 -0500
+Processing by ProductsController#new as HTML
+  Parameters: {"upc"=>"10113240"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (4.9ms)
+  Rendered products/new.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 43ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-12-02 23:41:21 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 58ms (Views: 56.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-02 23:41:27 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/get_barcode" for 127.0.0.1 at 2022-12-02 23:42:02 -0500
+Processing by ProductsController#get_barcode as */*
+  Parameters: {"upc"=>"19144764"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."upc" = ? LIMIT ?[0m  [["upc", "19144764"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/products/new?upc=19144764
+Completed 200 OK in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new?upc=19144764" for 127.0.0.1 at 2022-12-02 23:42:02 -0500
+Processing by ProductsController#new as HTML
+  Parameters: {"upc"=>"19144764"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (6.7ms)
+  Rendered products/new.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+Completed 200 OK in 33ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.175 at 2022-12-02 23:47:53 -0500
+Cannot render console from 192.168.1.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.175 at 2022-12-02 23:47:59 -0500
+Cannot render console from 192.168.1.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 192.168.1.175 at 2022-12-02 23:50:10 -0500
+Cannot render console from 192.168.1.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 192.168.1.175 at 2022-12-02 23:50:18 -0500
+Cannot render console from 192.168.1.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 192.168.1.175 at 2022-12-02 23:50:19 -0500
+Cannot render console from 192.168.1.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.175 at 2022-12-02 23:50:20 -0500
+Cannot render console from 192.168.1.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.175 at 2022-12-02 23:51:15 -0500
+Cannot render console from 192.168.1.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 163ms (Views: 161.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-02 23:51:26 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-02 23:51:45 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 201ms (Views: 199.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-02 23:53:34 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 210ms (Views: 208.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-02 23:55:44 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 250ms (Views: 247.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.175 at 2022-12-02 23:58:57 -0500
+Cannot render console from 192.168.1.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.175 at 2022-12-02 23:58:58 -0500
+Cannot render console from 192.168.1.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.175 at 2022-12-02 23:59:36 -0500
+Cannot render console from 192.168.1.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.175 at 2022-12-02 23:59:44 -0500
+Cannot render console from 192.168.1.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 40ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.175 at 2022-12-02 23:59:47 -0500
+Cannot render console from 192.168.1.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.175 at 2022-12-02 23:59:49 -0500
+Cannot render console from 192.168.1.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 00:00:01 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/get_barcode" for 127.0.0.1 at 2022-12-03 00:00:24 -0500
+Processing by ProductsController#get_barcode as */*
+  Parameters: {"upc"=>"19144788"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."upc" = ? LIMIT ?[0m  [["upc", "19144788"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/products/new?upc=19144788
+Completed 200 OK in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/products/new?upc=19144788" for 127.0.0.1 at 2022-12-03 00:00:24 -0500
+Processing by ProductsController#new as HTML
+  Parameters: {"upc"=>"19144788"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (6.9ms)
+  Rendered products/new.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+Completed 200 OK in 68ms (Views: 66.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new?upc=19144788" for 127.0.0.1 at 2022-12-03 00:00:41 -0500
+Processing by ProductsController#new as HTML
+  Parameters: {"upc"=>"19144788"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (7.4ms)
+  Rendered products/new.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new?upc=19144788" for 127.0.0.1 at 2022-12-03 00:00:43 -0500
+Processing by ProductsController#new as HTML
+  Parameters: {"upc"=>"19144788"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (4.0ms)
+  Rendered products/new.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new?upc=19144788" for 127.0.0.1 at 2022-12-03 00:00:44 -0500
+Processing by ProductsController#new as HTML
+  Parameters: {"upc"=>"19144788"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (7.0ms)
+  Rendered products/new.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 00:00:48 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/get_barcode" for 127.0.0.1 at 2022-12-03 00:01:20 -0500
+Processing by ProductsController#get_barcode as */*
+  Parameters: {"upc"=>"11231295"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."upc" = ? LIMIT ?[0m  [["upc", "11231295"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/products/new?upc=11231295
+Completed 200 OK in 11ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new?upc=11231295" for 127.0.0.1 at 2022-12-03 00:01:20 -0500
+Processing by ProductsController#new as HTML
+  Parameters: {"upc"=>"11231295"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (9.8ms)
+  Rendered products/new.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 00:04:04 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.175 at 2022-12-03 00:04:27 -0500
+Cannot render console from 192.168.1.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.176 at 2022-12-03 00:05:00 -0500
+Cannot render console from 192.168.1.176! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.176 at 2022-12-03 00:05:23 -0500
+Cannot render console from 192.168.1.176! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 47ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.176 at 2022-12-03 00:05:46 -0500
+Cannot render console from 192.168.1.176! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.176 at 2022-12-03 00:05:52 -0500
+Cannot render console from 192.168.1.176! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 00:06:43 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 170ms (Views: 169.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 00:07:27 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 223ms (Views: 221.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 10:05:22 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 202ms (Views: 200.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 10:08:57 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 40ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 10:09:24 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 52ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 10:09:37 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 50ms (Views: 48.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 10:13:12 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 10:13:30 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 10:13:52 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 10:13:59 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+Completed 200 OK in 60ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 10:15:02 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 10:15:07 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 10:20:03 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 265ms (Views: 263.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 10:24:09 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/get_barcode" for 127.0.0.1 at 2022-12-03 10:24:27 -0500
+Processing by ProductsController#get_barcode as */*
+  Parameters: {"upc"=>"62017121"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."upc" = ? LIMIT ?[0m  [["upc", "62017121"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/products/new?upc=62017121
+Completed 200 OK in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new?upc=62017121" for 127.0.0.1 at 2022-12-03 10:24:27 -0500
+Processing by ProductsController#new as HTML
+  Parameters: {"upc"=>"62017121"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (6.4ms)
+  Rendered products/new.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 10:26:27 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 189ms (Views: 188.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 20:58:43 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 461ms (Views: 454.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 21:08:06 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 329ms (Views: 324.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.175 at 2022-12-03 21:09:46 -0500
+Cannot render console from 192.168.1.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.175 at 2022-12-03 21:10:19 -0500
+Cannot render console from 192.168.1.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.175 at 2022-12-03 21:10:22 -0500
+Cannot render console from 192.168.1.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.175 at 2022-12-03 21:10:28 -0500
+Cannot render console from 192.168.1.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+Completed 200 OK in 36ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 21:12:14 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+Completed 200 OK in 69ms (Views: 67.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/get_barcode" for 127.0.0.1 at 2022-12-03 21:12:59 -0500
+Processing by ProductsController#get_barcode as */*
+  Parameters: {"upc"=>"12291151"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."upc" = ? LIMIT ?[0m  [["upc", "12291151"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/products/new?upc=12291151
+Completed 200 OK in 16ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/products/new?upc=12291151" for 127.0.0.1 at 2022-12-03 21:12:59 -0500
+Processing by ProductsController#new as HTML
+  Parameters: {"upc"=>"12291151"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (1503.8ms)
+  Rendered products/new.html.erb within layouts/application (1505.0ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 1530ms (Views: 1527.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new?upc=12291151" for 127.0.0.1 at 2022-12-03 21:14:01 -0500
+Processing by ProductsController#new as HTML
+  Parameters: {"upc"=>"12291151"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (4.5ms)
+  Rendered products/new.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 195ms (Views: 193.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 21:14:07 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/get_barcode" for 127.0.0.1 at 2022-12-03 21:14:22 -0500
+Processing by ProductsController#get_barcode as */*
+  Parameters: {"upc"=>"10917121"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."upc" = ? LIMIT ?[0m  [["upc", "10917121"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/products/new?upc=10917121
+Completed 200 OK in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new?upc=10917121" for 127.0.0.1 at 2022-12-03 21:14:22 -0500
+Processing by ProductsController#new as HTML
+  Parameters: {"upc"=>"10917121"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (18.5ms)
+  Rendered products/new.html.erb within layouts/application (20.0ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 53ms (Views: 52.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new?upc=10917121" for 127.0.0.1 at 2022-12-03 21:14:46 -0500
+Processing by ProductsController#new as HTML
+  Parameters: {"upc"=>"10917121"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (5.2ms)
+  Rendered products/new.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 184ms (Views: 183.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 21:14:53 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/get_barcode" for 127.0.0.1 at 2022-12-03 21:15:04 -0500
+Processing by ProductsController#get_barcode as */*
+  Parameters: {"upc"=>"12226771"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."upc" = ? LIMIT ?[0m  [["upc", "12226771"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/products/new?upc=12226771
+Completed 200 OK in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new?upc=12226771" for 127.0.0.1 at 2022-12-03 21:15:04 -0500
+Processing by ProductsController#new as HTML
+  Parameters: {"upc"=>"12226771"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (87.6ms)
+  Rendered products/new.html.erb within layouts/application (89.0ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+Completed 200 OK in 112ms (Views: 111.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 21:15:22 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/get_barcode" for 127.0.0.1 at 2022-12-03 21:15:32 -0500
+Processing by ProductsController#get_barcode as */*
+  Parameters: {"upc"=>"10117125"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."upc" = ? LIMIT ?[0m  [["upc", "10117125"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/products/new?upc=10117125
+Completed 200 OK in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new?upc=10117125" for 127.0.0.1 at 2022-12-03 21:15:32 -0500
+Processing by ProductsController#new as HTML
+  Parameters: {"upc"=>"10117125"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (7.9ms)
+  Rendered products/new.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 60ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 21:16:09 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/get_barcode" for 127.0.0.1 at 2022-12-03 21:17:23 -0500
+Processing by ProductsController#get_barcode as */*
+  Parameters: {"upc"=>"11218610"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."upc" = ? LIMIT ?[0m  [["upc", "11218610"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/products/new?upc=11218610
+Completed 200 OK in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/products/new?upc=11218610" for 127.0.0.1 at 2022-12-03 21:17:23 -0500
+Processing by ProductsController#new as HTML
+  Parameters: {"upc"=>"11218610"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (13.0ms)
+  Rendered products/new.html.erb within layouts/application (15.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 61ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 21:17:39 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/get_barcode" for 127.0.0.1 at 2022-12-03 21:17:49 -0500
+Processing by ProductsController#get_barcode as */*
+  Parameters: {"upc"=>"0141211407094"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."upc" = ? LIMIT ?[0m  [["upc", "0141211407094"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/products/new?upc=0141211407094
+Completed 200 OK in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new?upc=0141211407094" for 127.0.0.1 at 2022-12-03 21:17:49 -0500
+Processing by ProductsController#new as HTML
+  Parameters: {"upc"=>"0141211407094"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (7.4ms)
+  Rendered products/new.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+Completed 200 OK in 59ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 21:18:39 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/get_barcode" for 127.0.0.1 at 2022-12-03 21:19:15 -0500
+Processing by ProductsController#get_barcode as */*
+  Parameters: {"upc"=>"12117604"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."upc" = ? LIMIT ?[0m  [["upc", "12117604"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/products/new?upc=12117604
+Completed 200 OK in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new?upc=12117604" for 127.0.0.1 at 2022-12-03 21:19:15 -0500
+Processing by ProductsController#new as HTML
+  Parameters: {"upc"=>"12117604"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (10.0ms)
+  Rendered products/new.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+Completed 200 OK in 84ms (Views: 82.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 21:19:55 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 166ms (Views: 165.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/get_barcode" for 127.0.0.1 at 2022-12-03 21:20:18 -0500
+Processing by ProductsController#get_barcode as */*
+  Parameters: {"upc"=>"11497110"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."upc" = ? LIMIT ?[0m  [["upc", "11497110"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/products/new?upc=11497110
+Completed 200 OK in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/products/new?upc=11497110" for 127.0.0.1 at 2022-12-03 21:20:18 -0500
+Processing by ProductsController#new as HTML
+  Parameters: {"upc"=>"11497110"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (22.3ms)
+  Rendered products/new.html.erb within layouts/application (25.1ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 93ms (Views: 91.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new?upc=11497110" for 127.0.0.1 at 2022-12-03 21:20:29 -0500
+Processing by ProductsController#new as HTML
+  Parameters: {"upc"=>"11497110"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (3.5ms)
+  Rendered products/new.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 21:20:34 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/get_barcode" for 127.0.0.1 at 2022-12-03 21:20:49 -0500
+Processing by ProductsController#get_barcode as */*
+  Parameters: {"upc"=>"11118787"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."upc" = ? LIMIT ?[0m  [["upc", "11118787"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/products/new?upc=11118787
+Completed 200 OK in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/products/new?upc=11118787" for 127.0.0.1 at 2022-12-03 21:20:49 -0500
+Processing by ProductsController#new as HTML
+  Parameters: {"upc"=>"11118787"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (12.3ms)
+  Rendered products/new.html.erb within layouts/application (14.1ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 21:23:24 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/get_barcode" for 127.0.0.1 at 2022-12-03 21:23:37 -0500
+Processing by ProductsController#get_barcode as */*
+  Parameters: {"upc"=>"11507116"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."upc" = ? LIMIT ?[0m  [["upc", "11507116"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/products/new?upc=11507116
+Completed 200 OK in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new?upc=11507116" for 127.0.0.1 at 2022-12-03 21:23:37 -0500
+Processing by ProductsController#new as HTML
+  Parameters: {"upc"=>"11507116"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (6.9ms)
+  Rendered products/new.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+Completed 200 OK in 60ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 21:23:50 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 42ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/get_barcode" for 127.0.0.1 at 2022-12-03 21:24:35 -0500
+Processing by ProductsController#get_barcode as */*
+  Parameters: {"upc"=>"22188601"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."upc" = ? LIMIT ?[0m  [["upc", "22188601"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/products/new?upc=22188601
+Completed 200 OK in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new?upc=22188601" for 127.0.0.1 at 2022-12-03 21:24:35 -0500
+Processing by ProductsController#new as HTML
+  Parameters: {"upc"=>"22188601"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (7.6ms)
+  Rendered products/new.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 65ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.175 at 2022-12-03 21:26:15 -0500
+Cannot render console from 192.168.1.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 21:28:51 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 166ms (Views: 164.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 21:37:57 -0500
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 328ms (Views: 325.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.189 at 2022-12-03 21:42:08 -0500
+Cannot render console from 192.168.1.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.189 at 2022-12-03 21:42:36 -0500
+Cannot render console from 192.168.1.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 184ms (Views: 182.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.189 at 2022-12-03 21:42:58 -0500
+Cannot render console from 192.168.1.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 171ms (Views: 170.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.189 at 2022-12-03 21:43:10 -0500
+Cannot render console from 192.168.1.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.189 at 2022-12-03 21:43:41 -0500
+Cannot render console from 192.168.1.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+Completed 200 OK in 162ms (Views: 160.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.189 at 2022-12-03 22:00:13 -0500
+Cannot render console from 192.168.1.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 62ms (Views: 60.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.189 at 2022-12-03 22:00:39 -0500
+Cannot render console from 192.168.1.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
